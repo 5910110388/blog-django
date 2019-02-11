@@ -1,0 +1,29 @@
+
+
+<html>
+  <head>
+      <link href="https://fonts.googleapis.com/css?family=Kanit|Sarabun" rel="stylesheet">
+      <title>บล็อกของข้าพเจ้า</title>
+  </head>
+  <body>
+      <style>
+          p{
+              font-family: 'Sarabun', sans-serif;
+          }
+          h1{
+              font-family: 'Kanit', sans-serif;
+          }
+          a{
+              text-decoration: none;
+          }
+      </style>
+    <p>{% for post in posts %}</p>
+      <div>
+        <p>เผยแพร่เมื่อ : {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <hr>
+      </div>
+    {% endfor %}
+  </body>
+</html>
